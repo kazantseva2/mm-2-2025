@@ -1,0 +1,42 @@
+&CONTROL
+      calculation = 'scf',
+      etot_conv_thr = 2d-05,
+      forc_conv_thr = 0.0001,
+      outdir = './out/',
+      prefix = 'aiida',
+      pseudo_dir = './pseudo/',
+      tprnfor = .TRUE.,
+      tstress = .TRUE.,
+      verbosity = 'high',
+/
+&SYSTEM
+      degauss = 0.02,
+      ecutrho = 360.0,
+      ecutwfc = 45.0,
+      ibrav = 0,
+      nat = 2,
+      nosym = .FALSE.,
+      ntyp = 1,
+      occupations = 'smearing',
+      smearing = 'cold',
+/
+&ELECTRONS
+      conv_thr = 4d-10,
+      electron_maxstep = 80,
+      mixing_beta = 0.4,
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+      Ge  72.6400 ge_pbesol_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS crystal
+      Ge 0.5000000000 0.5000000000 0.5000000000
+      Ge 0.7500000000 0.7500000000 0.7500000000
+K_POINTS automatic
+      13 13 13 0 0 0
+CELL_PARAMETERS angstrom
+      0.1139682724 2.8678257687 2.9541255974
+      2.9335561268 0.1976437162 2.7650616857
+      3.0008619418 2.8333171770 0.0897910941
